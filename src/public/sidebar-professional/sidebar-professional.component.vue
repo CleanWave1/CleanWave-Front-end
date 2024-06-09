@@ -35,7 +35,7 @@ export default {
     </div>
     <h3>Menu</h3>
     <div class="menu">
-      <router-link to="/home" class="button">
+      <router-link to="/professional-home" class="button">
         <span class="material-icons">home</span>
         <span class="text">Inicio</span>
       </router-link>
