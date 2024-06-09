@@ -6,7 +6,7 @@ import NavbarClient from "@/public/navbar-client/navbar-client.component.vue";
 
 const route = useRoute();
 
-const clientPaths = ['/inicio', '/servicios', '/ayuda', '/programar-limpieza','/pay-service'];
+const clientPaths = ['/client-home', '/services', '/client-help', '/request-service','/pay-service', 'profile'];
 
 const showClientNavbar = computed(() => clientPaths.includes(route.path));
 </script>
@@ -18,40 +18,45 @@ const showClientNavbar = computed(() => clientPaths.includes(route.path));
   </div>
 </template>
 
-<style scoped>
-
-:root{
+<style lang="scss">
+:root {
+  --primary: #3b9f70;
+  --primary-alt: #9FFFB0;
+  --grey: #64748b;
+  --dark: #2a2c2a;
+  --dark-alt: #9FFFB0;
+  --light: #21272A;
   --sidebar-width: 300px;
 }
 
-header {
-  line-height: 1.5;
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.logo {
+body {
+  background: whitesmoke;
   display: block;
-  margin: 0 auto 2rem;
+  color: var(--black);
+  margin: 0;
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
+.app {
+  height: 100vh;
+}
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
+.main-content {
+  flex-grow: 1;
+  transition: margin-left 0.2s ease-in-out;
+}
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+.main-content.showSidebar {
+  margin-left: var(--sidebar-width);
+}
 
-  .main-content.showSidebar {
-    margin-left: var(--sidebar-width);
-  }
+#app {
+  display: block;
+  padding: 0;
+  max-width: 100%;
 }
 </style>
