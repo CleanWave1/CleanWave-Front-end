@@ -54,7 +54,7 @@ export default {
     </div>
     <div class="flex"></div>
     <div class="menu">
-      <router-link to="/ayuda-profesional" class="button">
+      <router-link to="/professional-help" class="button">
         <span class="material-icons">info</span>
         <span class="text">Soporte</span>
       </router-link>

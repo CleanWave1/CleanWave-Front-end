@@ -20,11 +20,11 @@ export default {
 <template>
   <div class="card flex justify-content-center">
     <div class="button-containers">
-      <router-link to="/iniciar-sesion">
+      <router-link to="/log-in">
         <pv-button label="Iniciar sesión" link class="bigger-button"/>
       </router-link>
       <span class="separator">|</span>
-      <router-link to="/registrarse">
+      <router-link to="/professional-register">
         <pv-button label="Registrarse" link class="bigger-button"/>
       </router-link>
     </div>
@@ -67,12 +67,12 @@ export default {
       <label for="checkboxlabel" style="color: black; margin-left: 10px;">Acepto los términos y condiciones</label>
     </div>
     <div class="button-container">
-      <router-link to="/home">
+      <router-link to="/professional-home">
         <pv-button label="Crear Cuenta"/>
       </router-link>
     </div>
     <p class="redirect-text">
-      <router-link to="/registrarse">¿Buscas personal de limpieza? Regístrate aquí</router-link>
+      <router-link to="/client-register">¿Buscas personal de limpieza? Regístrate aquí</router-link>
     </p>
   </div>
 
