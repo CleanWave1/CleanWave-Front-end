@@ -64,7 +64,7 @@ export default {
       <label for="checkboxlabel" style="color: black; margin-left: 10px;">Acepto los términos y condiciones</label>
     </div>
     <div class="button-container">
-      <router-link to="/inicio">
+      <router-link to="/client-home">
         <pv-button label="Crear Cuenta"/>
       </router-link>
     </div>
