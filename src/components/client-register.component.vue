@@ -18,11 +18,11 @@ export default {
 <template>
   <div class="card flex justify-content-center">
     <div class="button-containers">
-      <router-link to="/iniciar-sesion">
+      <router-link to="/log-in">
         <pv-button label="Iniciar sesión" link class="bigger-button"/>
       </router-link>
       <span class="separator">|</span>
-      <router-link to="/registrarse">
+      <router-link to="/client-register">
         <pv-button label="Registrarse" link class="bigger-button"/>
       </router-link>
     </div>
@@ -69,7 +69,7 @@ export default {
       </router-link>
     </div>
     <p class="redirect-text">
-      <router-link to="/registrarse-personal-limpieza">¿Eres personal de limpieza? Regístrate aquí</router-link>
+      <router-link to="/professional-register">¿Eres personal de limpieza? Regístrate aquí</router-link>
     </p>
   </div>
 </template>

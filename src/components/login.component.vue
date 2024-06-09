@@ -20,11 +20,11 @@ export default {
 <template>
   <div class="card flex justify-content-center">
     <div class="button-containers">
-      <router-link to="/iniciar-sesion">
+      <router-link to="/log-in">
         <pv-button label="Iniciar sesión" link class="bigger-button"/>
       </router-link>
       <span class="separator">|</span>
-      <router-link to="/registrarse">
+      <router-link to="/client-register">
         <pv-button label="Registrarse" link class="bigger-button"/>
       </router-link>
     </div>
@@ -46,7 +46,7 @@ export default {
       <label for="checkboxlabel" style="color: black; margin-left: 10px;">Recuerdame</label>
     </div>
     <div class="button-container">
-      <router-link to="/inicio">
+      <router-link to="/client-home">
         <pv-button label="Iniciar Sesion" severity="success"/>
       </router-link>
     </div>

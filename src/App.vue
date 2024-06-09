@@ -6,7 +6,7 @@ import NavbarClient from "@/public/navbar-client/navbar-client.component.vue";
 
 const route = useRoute();
 
-const clientPaths = ['/inicio', '/servicios', '/ayuda', '/programar-limpieza','/pay-service'];
+const clientPaths = ['/client-home', '/services', '/client-help', '/request-service','/pay-service', 'profile'];
 
 const showClientNavbar = computed(() => clientPaths.includes(route.path));
 </script>
