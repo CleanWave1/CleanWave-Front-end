@@ -7,7 +7,7 @@ export default {
 <template>
   <div>
     <div class="back-icon">
-      <router-link to="/iniciar-sesion">
+      <router-link to="/log-in">
         <span class="pi pi-arrow-left"></span>
       </router-link>
     </div>

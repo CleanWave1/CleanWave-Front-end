@@ -1,6 +1,6 @@
 <script>
 import {ref} from 'vue'
-import logoURL from '/src/assets/logo.png'
+import logoURL from '/src/assets/cleanwave-logo.png'
 import userImg from '/src/assets/user.png'
 
 export default {
@@ -67,9 +67,11 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+
 aside {
   display: flex;
   flex-direction: column;
+  background-color:#DCFFE2;
 
   width: calc(2rem + 32px);
   overflow: hidden;
@@ -198,7 +200,7 @@ aside {
     }
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1490px) {
     position: absolute;
     z-index: 99;
   }

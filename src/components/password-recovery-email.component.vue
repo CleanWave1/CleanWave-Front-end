@@ -7,7 +7,7 @@ export default {
 <template>
   <div>
     <div class="back-icon">
-      <router-link to="/iniciar-sesion">
+      <router-link to="/log-in">
         <span class="pi pi-arrow-left"></span>
       </router-link>
       <div class="card flex justify-content-center">
@@ -18,7 +18,7 @@ export default {
         </div>
 
         <div class="button-container">
-          <router-link to="/iniciar-sesion">
+          <router-link to="/log-in">
             <pv-button label="Listo"/>
           </router-link>
         </div>
