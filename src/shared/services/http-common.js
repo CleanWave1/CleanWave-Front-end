@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_BASE_URL = 'http://localhost:5296/api/v1';
+const API_BASE_URL = 'https://backendclean.azurewebsites.net/api/v1';
 
 /**
  * Axios instance
