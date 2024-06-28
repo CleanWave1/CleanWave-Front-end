@@ -17,9 +17,10 @@ import ProfessionalHomeTableComponent from "@/components/professional-home-table
 const router = createRouter({
     history: createWebHistory(),
     routes: [
-        { path: '/log-in', component: loginComponent, meta: { title: 'Iniciar sesión' } },
+        { path: '/log-in', name: 'log-in', component: loginComponent, meta: { title: 'Iniciar sesión' } },
         {
             path: '/professional-home',
+            name: 'professional-home',
             component: ProfessionalLayout,
             children: [
                 {
@@ -31,6 +32,7 @@ const router = createRouter({
         },
         {
             path: '/settings',
+            name: 'settings',
             component: ProfessionalLayout,
             children: [
                 {
@@ -42,6 +44,7 @@ const router = createRouter({
         },
         {
             path: '/professional-help',
+            name: 'professional-help',
             component: ProfessionalLayout,
             children: [
                 {
@@ -51,15 +54,15 @@ const router = createRouter({
                 },
             ]
         },
-        { path: '/client-register', component: clientRegisterComponent, meta: { title: 'Registrarse' } },
-        { path: '/forgot-password', component: passwordRecoveryComponent, meta: { title: 'Recuperar contraseña' } },
-        { path: '/recovery-email', component: passwordRecoveryEmailComponent, meta: { title: 'Recuperar contraseña' } },
-        { path: '/professional-register', component: professionalRegisterComponent, meta: { title: 'Registrarse' } },
-        { path: '/client-home', component: clientHomeComponent, meta: { title: 'Inicio' } },
-        { path: '/services', component: servicesComponent, meta: { title: 'Servicios' } },
-        { path: '/request-service', component: clientRequestServiceComponent, meta: { title: 'Programar Limpieza' } },
-        { path: '/pay-service', component: payServiceComponent, meta: {title: 'Pagar Servicio'}},
-        { path: '/client-help', component: clientSupportComponent, meta: { title: 'Soporte' } },
+        { path: '/client-register', name: 'client-register', component: clientRegisterComponent, meta: { title: 'Registrarse' } },
+        { path: '/forgot-password', name: 'forgot-password', component: passwordRecoveryComponent, meta: { title: 'Recuperar contraseña' } },
+        { path: '/recovery-email', name: 'recovery-email', component: passwordRecoveryEmailComponent, meta: { title: 'Recuperar contraseña' } },
+        { path: '/professional-register', name: 'professional-register', component: professionalRegisterComponent, meta: { title: 'Registrarse' } },
+        { path: '/client-home', name: 'client-home', component: clientHomeComponent, meta: { title: 'Inicio' } },
+        { path: '/services', name: 'services', component: servicesComponent, meta: { title: 'Servicios' } },
+        { path: '/request-service', name: 'request-service', component: clientRequestServiceComponent, meta: { title: 'Programar Limpieza' } },
+        { path: '/pay-service', name: 'pay-service', component: payServiceComponent, meta: { title: 'Pagar Servicio' } },
+        { path: '/client-help', name: 'client-help', component: clientSupportComponent, meta: { title: 'Soporte' } },
         { path: '/', redirect: '/log-in' },
     ],
 });

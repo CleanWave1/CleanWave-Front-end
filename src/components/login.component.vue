@@ -1,4 +1,7 @@
 <script>
+import { useAuthenticationStore } from "@/iam/services/authentication.store.js";
+import { SignInRequest } from "@/iam/model/sign-in.request.js";
+
 export default {
   name: "login",
   data() {
@@ -6,6 +9,7 @@ export default {
       checkedtyo: false,
       checkedsolo: false,
       checkedgroup: false,
+      email: '',
       password: '',
       confirmPassword: '',
       showPassword: false,
@@ -13,6 +17,11 @@ export default {
     };
   },
   methods: {
+    onSignIn() {
+      let authenticationStore = useAuthenticationStore();
+      let signInRequest = new SignInRequest(this.email, this.password);
+      authenticationStore.signIn(signInRequest, this.$router);
+    }
   }
 }
 </script>
@@ -35,7 +44,7 @@ export default {
       <label for="email" style="background-color: transparent;">Correo Electronico</label>
     </pv-float-label>
 
-    <div class="password-containers"> <!-- Container for alignment -->
+    <div class="password-containers">
       <pv-float-label class="wide-floatlabel">
         <pv-password v-model="password" :feedback="false" inputId="password" toggle-mask showPassword="showPassword"/>
         <label for="password" style="background-color: transparent;">Contraseña</label>
@@ -46,9 +55,7 @@ export default {
       <label for="checkboxlabel" style="color: black; margin-left: 10px;">Recuerdame</label>
     </div>
     <div class="button-container">
-      <router-link to="/client-home">
-        <pv-button label="Iniciar Sesion" severity="success"/>
-      </router-link>
+      <pv-button @click="onSignIn" label="Iniciar Sesion" severity="success"/>
     </div>
     <p class="redirect-text">
       <router-link to="/forgot-password">¿Olvidaste tu contraseña?</router-link>
@@ -57,8 +64,8 @@ export default {
 </template>
 
 <style scoped>
-.flex{
-  display:flex;
+.flex {
+  display: flex;
   padding: 20px;
 }
 
@@ -67,19 +74,20 @@ export default {
   gap: 205px;
 }
 
-
-.card{
+.card {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 20px;
   gap: 15px;
 }
+
 .button-container {
   display: flex;
   padding: 20px;
-  margin-left: 270px
+  margin-left: 270px;
 }
+
 .button-containers {
   display: flex;
   justify-content: space-between;
@@ -90,7 +98,7 @@ export default {
   margin: 0 100px;
 }
 
-.redirect-text{
+.redirect-text {
   display: flex;
   margin-left: 270px;
 }
@@ -107,6 +115,6 @@ export default {
 }
 
 pv-button:hover {
-  text-decoration:none;
+  text-decoration: none;
 }
 </style>
