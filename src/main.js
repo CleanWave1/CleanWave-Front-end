@@ -29,11 +29,14 @@ import Accordion from "primevue/accordion";
 import AccordionTab from "primevue/accordiontab";
 import Image from "primevue/image";
 import Ripple from 'primevue/ripple';
+import { createPinia } from 'pinia';
 
+const pinia = createPinia();
 createApp(App)
     .directive('ripple', Ripple)
     .use(PrimeVue, { ripple: true })
     .use(router)
+    .use(pinia)
     .component('pv-toast', Toast)
     .component('pv-toolbar', Toolbar)
     .component('pv-card', Card)
